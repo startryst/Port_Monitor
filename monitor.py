@@ -2,8 +2,8 @@
 
 
 # Environment requirement:
-# 1. CentOS 6.8 with network tools 'nc' installed
-# 2. Python 2.6.6 interpreter
+# 1. CentOS 6.8 with network tools 'nc' installed, due to different output of 'nc' in Mac, Mac has some problems
+# 2. Python 2.6.6/2.7.10 interpreter
 # chmod 755 for this file to run directly
 
 import subprocess
