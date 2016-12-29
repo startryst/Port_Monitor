@@ -22,11 +22,11 @@ def nc_test(ip_list, result_file):
     for i in ip_list:
         output = subprocess.Popen(['nc', '-w', '2', '-z', i[0], i[1]], stdout=subprocess.PIPE).communicate()[0]
         if output == '':
-            result = str(datetime.now()).ljust(30) + i[0] + ':' + i[1].ljust(15) + 'FAILED'.ljust(5)
+            result = '|' + str(datetime.now()).ljust(30) + '|' + (i[0] + ':' + i[1]).ljust(20) + '|' + 'FAILED'.ljust(10)
             print result
             save_to_file(result, result_file)
         else:
-            result = str(datetime.now()).ljust(30) + i[0] + ':' + i[1].ljust(15) + 'SUCCESS'.ljust(5)
+            result = '|' + str(datetime.now()).ljust(30) + '|' + (i[0] + ':' + i[1]).ljust(20) + '|' + 'SUCCESS'.ljust(10)
             print result
             save_to_file(result, result_file)
 
